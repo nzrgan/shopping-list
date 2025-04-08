@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  padding: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper {
+  background: #fff;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eaeaea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+input[type="checkbox"] + label:hover {
+  background-color: #d6d6d6;
+}
+
+input[type="checkbox"] + label:active {
+  transform: scale(0.98);
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #aaa;
+  background-color: #c7f5c3;
+}
+
+input[type="checkbox"] + label::before {
+  content: "🛒";
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: " ✅";
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.shopping-list li:nth-child(even) label {
+  background-color: #f9f9f9;
+}
+
+.submit-btn,
+.theme-toggle {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.submit-btn:hover,
+.theme-toggle:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+body.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark .wrapper {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark input[type="checkbox"] + label {
+  background-color: #444;
+}
+
+body.dark input[type="checkbox"] + label:hover {
+  background-color: #555;
+}
+
+body.dark input[type="checkbox"]:checked + label {
+  background-color: #3a5;
+  color: #dcdcdc;
+}
+
+body.dark .submit-btn,
+body.dark .theme-toggle {
+  background-color: #666;
+  color: #fff;
+}
+
+body.dark .submit-btn:hover,
+body.dark .theme-toggle:hover {
+  background-color: #888;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Shopping List</title>
+  <link rel="icon" href="http://flukeout.github.io/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">Shopping List</h1>
+
+    <ul class="shopping-list">
+      <li><input type="checkbox" id="milk" /><label for="milk">🥛 Milk</label></li>
+      <li><input type="checkbox" id="eggs" /><label for="eggs">🥚 Eggs</label></li>
+      <li><input type="checkbox" id="bread" /><label for="bread">🍞 Bread</label></li>
+      <li><input type="checkbox" id="cheese" /><label for="cheese">🧀 Cheese</label></li>
+      <li><input type="checkbox" id="tomatoes" /><label for="tomatoes">🍅 Tomatoes</label></li>
+      <li><input type="checkbox" id="pasta" /><label for="pasta">🍝 Pasta</label></li>
+      <li><input type="checkbox" id="coffee" /><label for="coffee">☕ Coffee</label></li>
+      <li><input type="checkbox" id="icecream" /><label for="icecream">🍦 Ice Cream</label></li>
+    </ul>
+
+    <button class="submit-btn" type="button">Submit</button>
+    <button class="theme-toggle" type="button" onclick="toggleTheme()">Toggle Dark Mode</button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
